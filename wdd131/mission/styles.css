@@ -1,0 +1,52 @@
+/* .light */
+body.light{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    align-items: center;
+}
+.every{
+    border: grey;
+    border-style: solid;
+    border-width: 1px;
+    width: 50%;
+    margin: 0 auto;
+}
+.titleAll{
+
+    letter-spacing: .2em;
+    padding-bottom: 1em;
+}
+.subtitle{
+    color: #006EB6;
+    border-bottom: 1px solid grey;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+.main{
+    max-width: 600px;
+    text-align: left;
+    margin: 0 auto;
+}
+.listStart{
+    max-width: 600px;
+    text-align: left;
+    margin: 1.5em auto;
+    font-style: italic;
+}
+.list{
+    padding-left: 3em;
+    max-width: 600px;
+    text-align: left;
+    margin: 1.5em auto;
+}
+img{
+    width: 150px;
+    margin: 0 auto;
+    padding-bottom: 3em;
+}
+body.dark {
+    background-color: #333;
+    color: white;
+}
