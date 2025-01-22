@@ -1,10 +1,10 @@
 // newList.classList.add("dark")
 const select = document.querySelector("select");
-select.addEventListener();
+select.addEventListener("change", changeBodyClass);
 const img = document.querySelector("img");
 img.setAttribute("src", "byui-logo_white.png");
 
-const styleSelector = document.getElementByClass('styleSelector');
+const styleSelector = document.querySelectorAll('.styleSelector');
 const body = document.body;
 
 function changeBodyClass(event) {
@@ -15,6 +15,6 @@ function changeBodyClass(event) {
   body.classList.add(selectedStyle);
 }
 
-styleSelectors.forEach(selector => {
+styleSelector.forEach(selector => {
     selector.addEventListener('change', changeBodyClass);
   });
