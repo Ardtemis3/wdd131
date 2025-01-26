@@ -1,44 +1,33 @@
 // event.js
 let tasks = [];
 
-
-function taskTemp(task){
-    return
-        `<li ${task.completed ? 'class="strike"' : ""}>
-            <p>${task.detail}</p>
-            <div>
-                <span data-function="delete">❎</span>
-                <span data-function="complete">✅</span>
-            </div>
-        </li>`;
-}
-
 function renderTasks(tasks) {
   // get the list element from the DOM
+  const listElement = document.querySelector("#todoList");
   // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
-   let see = document.querySelector("#todoList");
-   see.innerHTML = "";
-   const map = tasks.map(taskTemp).join("");
-   see.innerhtml = map;
+  const tasksHtml = tasks.map(taskTemplate);
+  listElement.innerHTML = tasksHtml.join("");
 }
 
-//`<li ${task.completed ? 'class="strike"' : ""}>
-//    <p>${task.detail}</p>
-//    <div>
-//      <span data-function="delete">❎</span>
-//      <span data-function="complete">✅</span>
-//    </div>
-//  </li>`;
+function taskTemplate(task){
+  return `<li ${task.done ? 'class="strike"' : ""}>
+    <p>${task.detail}</p>
+    <div>
+      <span data-function="delete">❎</span>
+      <span data-function="complete">✅</span>
+    </div>
+  </li>`;
+}
+
 function newTask() {
   // get the value entered into the #todo input
   // add it to our arrays tasks
   // render out the list
     const todoInput = document.querySelector("#todo");
-    tasks.push({ task: todoInput.value, done: false });
+    tasks.push({ detail: todoInput.value, done: false });
     renderTasks(tasks);
     todoInput.value = "";
 }
-
 
 function removeTask(taskElement) {
   // Note the use of Array.filter to remove the element from our task array
@@ -51,7 +40,6 @@ function removeTask(taskElement) {
   // this line removes the HTML element from the DOM
   taskElement.remove();
 }
-
 
 function completeTask(taskElement) {
   // In this case we need to find the index of the task so we can modify it.
@@ -72,7 +60,7 @@ function manageTasks(event) {
   console.log(event.target);
   console.log(event.currentTarget);
   // event.target will point to the actual icon clicked on. We need to get the parent li to work with however. HINT: Remember element.closest()? Look it up if you don't
-
+  
   // because we added 'data-action="delete"' to each icon in a task we can access a dataset property on our target (e.target.dataset.action)
   // use that in a couple of if statements to decide whether to run removeTask or completeTask
 }

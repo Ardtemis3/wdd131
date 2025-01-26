@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+a:link,
+a:visited {
+  color: var(--accent-color);
+}
+body{
+    background-color: rgb(225, 223, 223);
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+}
+header{
+    background-color: purple;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Mooli';
+}
+main{
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+#title{
+    margin: 0;
+    padding-bottom: .5em;
+}
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border: 5px solid white; 
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+
+}
+#compas{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+#compas li {
+    padding-bottom: 1em;
+    margin: 0 auto;
+    text-decoration: underline;
+}
+#menuButton{
+    background-color: purple;
+    border: none;
+    font-size: 1em;
+    color: white;
+    padding-bottom: 1em;
+}
+#menu{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+#pic_title{
+    text-align: center;
+}
+.gallery{
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid: center;
+}
+figure{
+    align-items: center;
+}
+footer{
+    background-color: purple;
+    color: white;
+}
+@media screen and (min-width: 700px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+    }
+    #compas{
+        display: flex;
+    }
+    #compas li{
+        padding-left: 3em;
+    }
+@media screen and (min-width: 1000px) {
+        .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+        #menuButton{
+            display: none;
+        }
+        .hidden{
+            display: contents;
+        }
+}
+.viewer{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-rows: 25px 1fr;
+    justify-content: center;
+}
+.close-viewer{
+    text-align: right;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: none;
+}
+.bigView{
+    max-height: 100%;
+}
