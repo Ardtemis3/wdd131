@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Nova+Flat&display=swap');
+img{
+    width: 150px;
+    height: 150px;
+}
+body{
+    background-color: lavender;
+}
+header, footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    max-width: 1080px;
+    margin: auto;
+}
+#title{
+    font-family: 'Frijole', sans-serif;
+    color: #4F5D2F;
+    letter-spacing: .2em;
+}
+#heading, #social{
+    align-content: center;
+}
+#logoLeft{
+    justify-self: start;
+    width: 150px;
+    height: 150px;
+}
+#logoRight{
+    justify-self: end;
+    width: 150px;
+    height: 150px;
+}
+#home{
+    text-decoration: none;
+    color: #4F5D2F;
+}
+#home:hover{
+    text-decoration: none;
+    color: #73E2A7;
+}
+#pictures{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1080px;
+    margin: auto;
+    padding-top: 2%;
+}
+#head{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 7px solid black;
+    /* padding-bottom: 2%; */
+    justify-content: center;
+    align-items: center;
+}
+#galleryPic{
+    height: 250px;
+    width: 250px;
+    padding: 2%;
+    justify-self: center;
+}
+footer{
+    padding-top: 2%;
+}

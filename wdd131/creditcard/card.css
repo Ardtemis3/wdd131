@@ -1,8 +1,9 @@
 #front{
-    background-color: blue;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #DDDDDD;
     width: 300px;
     height: 200px;
-    /* position: absolute; */
     z-index: 2;
     grid-column: 1;
     grid-row: 1;
@@ -12,18 +13,49 @@
     border-radius: 10px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
+#top, #bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card-image{
+    grid-column: 2/2;
+    justify-self: end;
+}
+#total{
+    grid-column: 1/2;
+}
+label{
+    display: block;
+}
+#month, #year{
+    width: 20px;
+}
+#holderDiv{
+    padding-right: 5px;
+}
 #back{
-    background-color: red;
+    background-color: #DDDDDD;
     width: 300px;
     height: 200px;
     grid-column: 2;
     grid-row: 2;
-    /* margin-left: -20px;
-    margin-top: -20px; */
-    /* position: absolute; */
     z-index: 1;
     border: 2px solid transparent;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 10px 20px 1fr 50px;
+}
+#dark{
+    background-color: black;
+}
+#cvc{
+    justify-self: right;
+}
+#cvv{
+
+    /* align-self: bottom; */
+    width: 50px;
+
 }
 #submit{
     grid-column: 2;

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Nova+Flat&display=swap');
+h2{
+    font-family: 'Frijole', 'Nova Flat', sans-serif;
+}
+p{
+    font-family: 'Nova Flat', sans-serif;
+}
 img{
     /* size: 100px; */
     width: 150px;
