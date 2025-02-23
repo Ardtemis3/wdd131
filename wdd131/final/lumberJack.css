@@ -13,6 +13,10 @@ header, footer{
     max-width: 1080px;
     margin: auto;
 }
+#mainPic{
+    height: 250px;
+    width: 250px;
+}
 #title{
     font-family: 'Frijole', sans-serif;
     color: #4F5D2F;
@@ -40,9 +44,6 @@ header, footer{
     color: #73E2A7;
 }
 
-main{
-
-}
 #personal{
     display: flex;
     border-bottom: 7px solid black;
@@ -56,11 +57,21 @@ main{
 }
 #showCase{
     padding-top: 3em;
+    justify-items: center;
 }
 #imgdescription{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
 }
 
 footer{
     padding-top: 2%;
+}
+
+@media screen and (min-width: 800px) {
+    .socialPic{
+        height: 50px;
+        width: 50px;        
+    }
 }
